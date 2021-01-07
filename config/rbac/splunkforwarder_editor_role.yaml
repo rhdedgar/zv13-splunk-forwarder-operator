@@ -1,0 +1,24 @@
+# permissions for end users to edit splunkforwarders.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: splunkforwarder-editor-role
+rules:
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - splunkforwarders
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - splunkforwarders/status
+  verbs:
+  - get

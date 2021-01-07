@@ -1,0 +1,7 @@
+apiVersion: managed.openshift.io/v1alpha1
+kind: SplunkForwarder
+metadata:
+  name: splunkforwarder-sample
+spec:
+  # Add fields here
+  foo: bar

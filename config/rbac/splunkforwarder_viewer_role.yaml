@@ -1,0 +1,20 @@
+# permissions for end users to view splunkforwarders.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: splunkforwarder-viewer-role
+rules:
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - splunkforwarders
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - splunkforwarders/status
+  verbs:
+  - get
